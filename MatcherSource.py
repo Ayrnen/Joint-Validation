@@ -61,7 +61,7 @@ print()
 # Import Thor Data through DataBricks
 print('Databricks Connection Start')
 
-table_name = "eng_analytics_pub.t_thor_asset"
+table_name = "#####"
 # Connect to the Databricks cluster by using the
 # Data Source Name (DSN) that you created earlier.
 conn = pyodbc.connect("DSN=######", autocommit=True)
@@ -93,7 +93,7 @@ print('DB2 Connection Start')
 print()
 print('IGNORE THIS WARNING -')
 
-table_name = "WP.TRAIL_JOINTS"
+table_name = "#####"
 cnx = pyodbc.connect('DSN=######; UID=#######; PWD=######')
 query = 'Select Asset_ID, LINE_SEG_NBR, MP_SFX, TRK_TYP_CD, TRK_NBR, RAIL_POS_DESC, Track_Status_DESC, Longitude, Latitude from WP.TRAIL_JOINTS'
 dfCwr = pd.read_sql(query, cnx)
