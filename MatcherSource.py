@@ -95,7 +95,7 @@ print('IGNORE THIS WARNING -')
 
 table_name = "#####"
 cnx = pyodbc.connect('DSN=######; UID=#######; PWD=######')
-query = 'Select Asset_ID, LINE_SEG_NBR, MP_SFX, TRK_TYP_CD, TRK_NBR, RAIL_POS_DESC, Track_Status_DESC, Longitude, Latitude from WP.TRAIL_JOINTS'
+query = 'Select Asset_ID, LINE_SEG_NBR, MP_SFX, TRK_TYP_CD, TRK_NBR, RAIL_POS_DESC, Track_Status_DESC, Longitude, Latitude from #####'
 dfCwr = pd.read_sql(query, cnx)
 
 print('DB2 Connection End')
@@ -1033,7 +1033,7 @@ columns.columnFinalization()
 
 
 # Rename, Add, and Drop Columns
-newNames = {'aset_rid':'THOR ID', 'gmtry_car_nbr':'GeoCar', 'aset_loctn_lin_seg_nbr':'Line Segment',\
+newNames = {'aset_rid':'###', 'gmtry_car_nbr':'###', 'aset_loctn_lin_seg_nbr':'Line Segment',\
 'aset_loctn_trak_nbr':'Track Number','geaometry_rail_posn_nme':'THOR Rail',\
 'aset_loctn_lattd':'THOR LAT', 'aset_loctn_lngtd':'THOR LONG', 'aset_loctn_mp_nbr':'THOR MP',\
 'aset_loctn_trak_typ_cd':'Track Type', }
@@ -1053,7 +1053,7 @@ dfThor['THOR Rail'] = dfThor['THOR Rail'].str.upper()
 
 
 # dfThor = dfThor[dfThor['Case Number'] != '-'].reset_index(drop = True)
-columnOrder = ['GeoCar', 'THOR ID', 'CWR ID', 'Line Segment', 'Track Type',\
+columnOrder = ['###', '###', 'CWR ID', 'Line Segment', 'Track Type',\
 'Track Number', 'THOR MP', 'THOR Rail', 'CWR MP', 'CWR Rail', 'Exception',\
 'THOR LAT', 'THOR LONG', 'BM Logic', 'Case Number', 'Potential Matches', 'Match Details']
 dfThor = dfThor[columnOrder]
